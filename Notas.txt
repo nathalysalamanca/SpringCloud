@@ -1,0 +1,26 @@
+*FEING - Cliente Http - video 17
+-Declarativo
+-Anotaciones
+-Más facil que rest template
+-Desarrollado por netflix
+-Se integra con el balanceo de carga de ribbon 
+-Se encuentra configurado con eureka
+-Uso como cliente Http
+Menu->springboot->editar starters->cloud routin->opc cloud routing -> Feing (0:53)
+
+@EnableFeingClients (main)
+
+Interface : @FeingClient(name="como en properties",URL)
+Remplaza restController 
+
+@primary para seleccionar la interfaz que va usar el controllador o usar Qualifiers(7:25)
+
+*Ribbon - Balanceo de carga -Video 18
+Items con ribbon
+spring cloud 2.3.12(compatible con ribbon)
+adicionar dependencia ribbon (5:42)
+configurar robbon con feing 
+pasar la url al archivo properties 
+servicio-productos.ribbon.listOfServers (7:27)
+
+
