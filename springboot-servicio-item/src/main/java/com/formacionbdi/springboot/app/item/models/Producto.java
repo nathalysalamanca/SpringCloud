@@ -32,6 +32,6 @@ public class Producto {
 	public void setCreateAt(Date createAt) {
 		this.createAt = createAt;
 	}
-
 	
+
 }

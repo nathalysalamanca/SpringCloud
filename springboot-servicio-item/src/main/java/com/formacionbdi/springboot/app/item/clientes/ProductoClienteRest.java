@@ -8,14 +8,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.formacionbdi.springboot.app.item.models.Producto;
 
-@FeignClient(name="servicio-productos",url="localhost:8001")
+@FeignClient(name = "servicio-productos")
 public interface ProductoClienteRest {
 	
-	// GetMapping Indica la ruta del servicio que se va a consumir y mapea el json a los objetos 
-	 @GetMapping("listar")
-	 public List<Producto> listar();
-	 
-	 @GetMapping("/ver/{id}")
-		public Producto detalle(@PathVariable Long id) ;
-	 
+	@GetMapping("/listar")
+	public List<Producto> listar();
+	
+	@GetMapping("/ver/{id}")
+	public Producto detalle(@PathVariable Long id);
+
 }

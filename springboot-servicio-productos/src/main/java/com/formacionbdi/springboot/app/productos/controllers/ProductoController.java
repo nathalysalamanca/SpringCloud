@@ -1,4 +1,4 @@
-package com.formacionbdi.springboot.app.productos.models.controller;
+package com.formacionbdi.springboot.app.productos.controllers;
 
 import java.util.List;
 
@@ -12,16 +12,18 @@ import com.formacionbdi.springboot.app.productos.models.service.IProductoService
 
 @RestController
 public class ProductoController {
-
+	
 	@Autowired
-	private IProductoService service;
+	private IProductoService productoService;
 	
 	@GetMapping("/listar")
 	public List<Producto> listar(){
-		return service.findAll();
+		return productoService.findAll();
 	}
+	
 	@GetMapping("/ver/{id}")
 	public Producto detalle(@PathVariable Long id) {
-		return service.findById(id);
+		return productoService.findById(id);
 	}
+
 }
