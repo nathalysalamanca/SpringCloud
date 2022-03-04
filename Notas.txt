@@ -1,4 +1,4 @@
-*FEING - Cliente Http - video 17
+***FEING - Cliente Http - video 17
 -Declarativo
 -Anotaciones
 -Más facil que rest template
@@ -15,12 +15,20 @@ Remplaza restController
 
 @primary para seleccionar la interfaz que va usar el controllador o usar Qualifiers(7:25)
 
-*Ribbon - Balanceo de carga -Video 18
+***Ribbon - Balanceo de carga -Video 18
 Items con ribbon
 spring cloud 2.3.12(compatible con ribbon)
 adicionar dependencia ribbon (5:42)
 configurar robbon con feing 
 pasar la url al archivo properties 
 servicio-productos.ribbon.listOfServers (7:27)
+configurar ribbon cliente (main)
+@RibbonClient(name="servicio_productos")
+-Dserver.port=???? para levantar 2 instancias 
 
-
+***Prueba con postman balanceo de carga - Video 19 
+	 @Autowired
+	 private Environment env;
+	 Algoritmo de balanceo de carga  round robin 
+	
+*** Balanceo de carga con RestTemplate
